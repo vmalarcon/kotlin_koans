@@ -12,5 +12,6 @@ class _39_Html_Builders {
     @Test fun productTableIsColored() {
         val result = renderProductTable()
         assertTrue("Product table should be colored", result.contains("bgcolor"))
+        System.out.println(result);
     }
 }

@@ -29,11 +29,16 @@ fun todoTask37(): Nothing = TODO(
 )
 
 fun task37(): Map<Int, String> {
-    todoTask37()
-//    return buildMap {
-//        put(0, "0")
-//        for (i in 1..10) {
-//            put(i, "$i")
-//        }
-//    }
+    return buildMap {
+        put(0, "0")
+        for (i in 1..10) {
+            put(i, "$i")
+        }
+    }
+}
+
+fun <K, V> buildMap(build: MutableMap<K, V>.() -> Unit): Map<K, V> {
+    val resultMap = Hashtable<K, V>()
+    resultMap.build()
+    return resultMap
 }
